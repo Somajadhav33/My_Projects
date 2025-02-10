@@ -1,0 +1,134 @@
+:root {
+  --primary-color: rgb(11, 181, 238);
+  --bkg-color: beige;
+  --padding: 20px;
+  --text-white: white;
+  --text-black: black;
+  --border-radius: 5px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bkg-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: var(--padding);
+  color: var(--text-white);
+}
+
+header h1 {
+  font-size: 35px;
+}
+
+main {
+  height: 84vh;
+  padding: var(--padding);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main form {
+  display: flex;
+  justify-content: center;
+}
+
+form input[type="text"],
+button[type="submit"],
+.result a {
+  text-transform: capitalize;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  padding: calc(var(--padding) / 2);
+  outline: none;
+}
+
+form input[type="text"] {
+  flex-grow: 1;
+}
+
+form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--padding);
+  text-align: center;
+  font-size: 15px;
+  width: 100%;
+  position: fixed;
+}
+
+.result {
+  background-color: white;
+  padding: var(--padding);
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 10px rgb(226, 226, 226);
+  padding-bottom: 40px;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.result::-webkit-scrollbar {
+  background: #fbf6f6;
+  width: 1px;
+  height: 1px;
+}
+
+.result h2 {
+  text-transform: capitalize;
+}
+
+.result p {
+  margin: 10px;
+}
+
+.result p[class="partOfSpeech"] {
+  font-style: italic;
+  color: #808080;
+  margin-top: 2px;
+}
+
+.result div {
+  margin-top: 20px;
+}
+
+.result a {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.result span {
+  margin-left: 20px;
+}
+
+.result li {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  main form {
+    flex-direction: column;
+  }
+  form button {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
